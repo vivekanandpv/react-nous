@@ -13,6 +13,9 @@ const Navbar = (props) => {
       <NavLink to='contact'>
         <span className='mx-2'>Contact</span>
       </NavLink>
+      <NavLink to='report'>
+        <span className='mx-2'>Report</span>
+      </NavLink>
     </>
   );
 };

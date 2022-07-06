@@ -5,6 +5,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
+import Report from './components/Report';
 
 const App = (props) => {
   return (
@@ -19,6 +20,7 @@ const App = (props) => {
             <Route path='/home' exact component={Home} />
             <Route path='/about' exact component={About} />
             <Route path='/contact' exact component={Contact} />
+            <Route path='/report/:year' exact component={Report} />
 
             <Route path='*' component={NotFound} />
           </Switch>
