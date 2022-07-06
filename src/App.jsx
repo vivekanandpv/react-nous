@@ -4,18 +4,22 @@ import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
+import Navbar from './components/Navbar';
 
 const App = (props) => {
   return (
     <>
       <div className='container p-5'>
         <h3>Routing in React</h3>
-        <hr />
+
         <BrowserRouter>
+          <Navbar />
+          <hr />
           <Switch>
-            <Route path='/home' component={Home} />
-            <Route path='/about' component={About} />
-            <Route path='/contact' component={Contact} />
+            <Route path='/home' exact component={Home} />
+            <Route path='/about' exact component={About} />
+            <Route path='/contact' exact component={Contact} />
+
             <Route path='*' component={NotFound} />
           </Switch>
         </BrowserRouter>
