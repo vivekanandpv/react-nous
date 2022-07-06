@@ -6,6 +6,8 @@ import Contact from './components/Contact';
 import NotFound from './components/NotFound';
 import Navbar from './components/Navbar';
 import Report from './components/Report';
+import Info from './components/Info';
+import DepartmentRoutes from './routes/DepartmentRoutes';
 
 const App = (props) => {
   return (
@@ -20,7 +22,7 @@ const App = (props) => {
             <Route path='/home' exact component={Home} />
             <Route path='/about' exact component={About} />
             <Route path='/contact' exact component={Contact} />
-            <Route path='/report/:year' exact component={Report} />
+            <DepartmentRoutes />
 
             <Route path='*' component={NotFound} />
           </Switch>
