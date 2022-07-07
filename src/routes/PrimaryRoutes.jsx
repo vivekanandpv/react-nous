@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import {Redirect, Route, Switch} from 'react-router-dom';
 import Home from '../components/Home';
 import About from '../components/About';
 import Contact from '../components/Contact';
@@ -11,6 +11,7 @@ const PrimaryRoutes = (props) => {
     <>
         <Switch>
             <Route path='/home' exact component={Home} />
+            <Redirect from='/' to='/home' exact />
             <Route path='/about' exact component={About} />
             <Route path='/contact' exact component={Contact} />
             <Route path='/department'>
