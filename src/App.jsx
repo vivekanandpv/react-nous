@@ -8,6 +8,8 @@ import Navbar from './components/Navbar';
 import Report from './components/Report';
 import Info from './components/Info';
 import DepartmentRoutes from './routes/DepartmentRoutes';
+import PrimaryRoutes from './routes/PrimaryRoutes';
+
 
 const App = (props) => {
   return (
@@ -18,14 +20,8 @@ const App = (props) => {
         <BrowserRouter>
           <Navbar />
           <hr />
-          <Switch>
-            <Route path='/home' exact component={Home} />
-            <Route path='/about' exact component={About} />
-            <Route path='/contact' exact component={Contact} />
-            <DepartmentRoutes />
+          <PrimaryRoutes />
 
-            <Route path='*' component={NotFound} />
-          </Switch>
         </BrowserRouter>
       </div>
     </>
