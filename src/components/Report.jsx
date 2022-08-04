@@ -7,7 +7,6 @@ const useQuery = (location) => {
 };
 
 const Report = (props) => {
-  //   const { year } = useParams();
   const { country, language } = useQuery(useLocation());
 
   return (
